@@ -5,7 +5,9 @@ console.log(" my first name is "+firstName + " " +"my last name is " +lastName);
 //string interpolation
 console.log(`my name is ${firstName} and last name is ${lastName}  `);
 
+
 let newString= new String("hello world");
+console.log(` how to inject the variable ${newString} `);
 console.log(newString.length);
 console.log(newString[7]); // Accessing first character
 
