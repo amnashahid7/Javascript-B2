@@ -46,10 +46,10 @@ for (let index = 0; index < 10; index++) {
 // nested loops
 
 for (let index = 0; index <= 10; index++) {
-  console.log(index);
+  // console.log(index);
 
   for (let index = 11; index <= 20; index++) {
-    console.log("heklele");
+    // console.log("heklele");
     if (index === 15) {
       break;
     }
@@ -61,19 +61,12 @@ for (let index = 0; index <= 10; index++) {
 // ***
 // ****
 // *****
-// function nestedLoop(arr){
-//    outter:for(let i = 0; i < arr.length; i++){
+for (let i = 10; i > 1; i--) {
+  let star = "";
 
-//      console.log([i]);
+  for (let j = 0; j < i; j++) {
+    star += "*";
+  }
 
-//     inner:for(let j = 0; j < arr.length; j++){
-
-//        return([j]);
-
-//      }
-
-//    }
-
-// }
-
-// console.log(nestedLoop(10));
+  console.log(star);
+}
