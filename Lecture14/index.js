@@ -26,15 +26,16 @@
 // ];
 
 // for (let index = 0; index < students.length; index++) {
-
 //   let booksNumbers = students[index].books;
-//   let sum = 0;
-//   for (let indexinner = 0; indexinner < booksNumbers.length; indexinner++) {
-//     sum = sum + booksNumbers[indexinner];
+
+//   let total = 0;
+
+//   for (let indexInner = 0; indexInner < books.length; indexInner++) {
+//     total = total + booksNumbers[indexInner];
 //   }
 
 //   let rollNumber = students[index].rollNumber;
-//   console.log(`roll No: ${rollNumber}: total marks: ${sum}`);
+//   console.log(`roll No: ${rollNumber}: total marks: ${total}`);
 // }
 
 let userLogin = true;
