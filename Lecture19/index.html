@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="paragraph" class="para">hello from html</p>
+    <p class="para">hello from html 2</p>
+
+    <script>
+      let para = document.getElementById('paragraph');
+      console.log(para);
+
+      let para1 = document.getElementsByClassName('para');
+      console.log(para1);
+
+      let element = document.querySelector('.para');
+      console.log(element);
+
+      let element1 = document.querySelectorAll('#paragraph');
+      console.log(element1);
+    </script>
+  </body>
+</html>
