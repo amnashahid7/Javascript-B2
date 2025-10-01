@@ -9,22 +9,32 @@
     <h1 class="head" id="heading">conect to js</h1>
     <h1 class="head">conect to javascript</h1>
     <p>jsjajaja</p>
+    <div id="box"></div>
 
     <script>
-      let heading = document.querySelector('h1');
-      console.log(heading);
+      let headingContent = document.getElementById('heading');
+      headingContent.textContent = 'chnaged using textcontent';
+      headingContent.style.color = 'red';
+      headingContent.style.fontSize = '100px';
+      headingContent.style.backgroundColor = 'green';
 
-      let headingById = document.getElementById('heading');
-      console.log(headingById);
+      let div = document.getElementById('box');
+      div.innerHTML = '<h1>hello</h1>';
 
-      let headingbyClass = document.getElementsByClassName('head');
-      console.log(headingbyClass);
+      // let heading = document.querySelector('h1');
+      // console.log(heading);
 
-      let headingbyTag = document.querySelectorAll('h1');
-      console.log(headingbyTag);
+      // let headingById = document.getElementById('heading');
+      // console.log(headingById);
 
-      let parabyTag = document.querySelectorAll('p');
-      console.log(parabyTag);
+      // let headingbyClass = document.getElementsByClassName('head');
+      // console.log(headingbyClass);
+
+      // let headingbyTag = document.querySelectorAll('h1');
+      // console.log(headingbyTag);
+
+      // let parabyTag = document.querySelectorAll('p');
+      // console.log(parabyTag);
     </script>
   </body>
 </html>
