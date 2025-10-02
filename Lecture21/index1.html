@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="parent">
+      <p id="para">just para</p>
+      <button id="button">click me</button>
+    </div>
+    <form action="">
+        
+    </form>
+
+    <script>
+      let div = document.getElementById('parent');
+      //   div.innerHTML = '<p>hello from first div</p>';
+      //   div.innerHTML = '<p>this is second line</p>';
+
+      let headingFromJs = document.createElement('h1');
+      headingFromJs.textContent = 'create by js';
+      let paraFromJs = document.createElement('p');
+      paraFromJs.textContent = 'para by js';
+      div.appendChild(headingFromJs);
+      div.appendChild(paraFromJs);
+
+      let para = document.getElementById('para');
+      div.removeChild(para);
+
+      let colorDiv = document.createElement('div');
+      colorDiv.style.border = '1px solid black';
+      colorDiv.style.width = '200px';
+      colorDiv.style.height = '200px';
+      div.appendChild(colorDiv);
+
+      function clicked() {
+        let randomNum = Math.random();
+        console.log('button is clicked', randomNum);
+        colorDiv.style.backgroundColor = 'red';
+      }
+      function clicked1() {
+        let randomNum = Math.random();
+        console.log('button is clicked', randomNum);
+        colorDiv.style.backgroundColor = 'blue';
+      }
+
+      let btn = document.getElementById('button');
+      btn.onclick = clicked1;
+    </script>
+  </body>
+</html>
