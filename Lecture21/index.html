@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h1 id="heading">hello</h1>
+      <div id="main-div"></div>
+    </div>
+
+    <script>
+      let heading = document.getElementById('heading');
+      let div = document.getElementById('main-div');
+      heading.textContent = 'hello from heading';
+      heading.style.color = 'red';
+      heading.style.fontSize = '100px';
+
+      div.innerHTML = '<p>hello from para </p>';
+      div.style.border = '2px solid black';
+      div.style.height = '100vh';
+      div.style.width = '500px';
+      div.style.display = 'flex';
+      div.style.justifyContent = 'center';
+      div.style.alignItems = 'center';
+      div.style.fontWeight = 'bolder';
+
+      //   let heading1 = document.querySelector('#heading');
+      //   let heading2 = document.querySelectorAll('h1');
+      //   let heading3 = document.getElementsByClassName('head');
+    </script>
+  </body>
+</html>
