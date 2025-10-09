@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .white {
+        background: white;
+        color: black;
+        border-radius: 20px;
+        padding: 20px 10px;
+      }
+      .dark {
+        background: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+        border-radius: 20px;
+        padding: 20px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <label for="">name</label>
+      <input class="white" type="text" name="" id="name" />
+      <label for="">password</label>
+      <input class="white" type="text" name="" id="pass" />
+      <button type="submit">submit</button>
+    </form>
+
+    <button id="switch">switch</button>
+
+    <script>
+      let btn = document.querySelector('button');
+      btn.onclick = (e) => {
+        e.preventDefault();
+        console.log('hello');
+      };
+
+      let nameInput = document.querySelector('#name');
+      let passInput = document.querySelector('#pass');
+
+      let switch1 = document.querySelector('#switch');
+      console.log(nameInput.classList);
+
+      //   switch1.onclick = () => {
+      //     if (nameInput.classList[0] === 'white') {
+      //       nameInput.classList.remove('white');
+      //       passInput.classList.remove('white');
+      //       nameInput.classList.add('dark');
+      //       passInput.classList.add('dark');
+      //     } else {
+      //       nameInput.classList.remove('dark');
+      //       passInput.classList.remove('dark');
+      //       nameInput.classList.add('white');
+      //       passInput.classList.add('white');
+      //     }
+      //   };
+
+      switch1.onclick = () => {
+        nameInput.classList.toggle('dark');
+        passInput.classList.toggle('dark');
+      };
+    </script>
+  </body>
+</html>
