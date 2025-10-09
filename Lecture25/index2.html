@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h1>hello</h1>
+
+      <input type="text" name="" id="" />
+    </div>
+
+    <button>clck</button>
+
+    <script>
+      let div = document.querySelector('div');
+      let heading = document.querySelector('h1');
+      let input = document.querySelector('input');
+
+      let btn = document.querySelector('button');
+      //   btn.onclick = () => {
+      //     console.log('hello from btn click');
+      //     alert('from btn');
+      //     div.removeChild(heading);
+      //   };
+
+      //   mouseout and mouseover and click
+      btn.addEventListener('click', () => {
+        console.log('hello from btn listner');
+        alert('from listener');
+        div.removeChild(heading);
+        console.log(input.value);
+      });
+    </script>
+  </body>
+</html>
