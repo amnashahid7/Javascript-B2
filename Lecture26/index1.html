@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="width: 200px; height: 300px; border: 2px solid black"></div>
+    <button>click me</button>
+    <button id="ello">hello</button>
+    <script>
+      let btn = document.querySelector('button');
+      let div = document.querySelector('div');
+      let hello = document.getElementById('ello');
+      function click() {
+        // alert('hello ahmed');
+        // let num = Math.random();
+        // console.log('hello jalil', num);
+        div.style.backgroundColor = 'red';
+      }
+      btn.onclick = click;
+
+      hello.addEventListener('click', () => {
+        div.style.backgroundColor = 'green';
+      });
+      hello.addEventListener('mouseover', () => {
+        div.style.backgroundColor = 'yellow';
+      });
+      hello.addEventListener('mouseout', () => {
+        div.style.backgroundColor = 'black';
+      });
+
+      window.addEventListener('keydown', (e) => {
+        console.log(e.key);
+      });
+    </script>
+  </body>
+</html>
