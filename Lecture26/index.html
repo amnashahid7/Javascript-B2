@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <div class="parent">
+      <div class="child"></div>
+      <div class="child hello"></div>
+      <div class="child"></div>
+    </div> -->
+
+    <button id="color">color changer</button>
+    <!-- <form action="">
+      <label for="">name</label>
+      <input type="text" />
+      <label for="">email</label>
+      <input type="email" />
+      <label for="">password</label>
+      <input type="password" />
+      <button id="Submit">Submit</button>
+    </form> -->
+
+    <script>
+      let colors = [
+        'red',
+        'blue',
+        'green',
+        'yellow',
+        'pink',
+        'purple',
+        'orange',
+      ];
+
+      ///changes color from the array
+      let btn = document.querySelector('#color');
+      let body = document.querySelector('body');
+
+      btn.addEventListener('click', () => {
+        let num = (Math.random() * colors.length).toFixed();
+        body.style.backgroundColor = colors[num];
+      });
+
+      ///generates new color every time
+      //       let btn = document.querySelector('#color');
+      // let body = document.querySelector('body');
+
+      // btn.addEventListener('click', () => {
+      //   // Generate a random hex color
+      //   let randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+      //   body.style.backgroundColor = randomColor;
+      // });
+
+      ///form validation
+
+      //   let form = document.querySelector('#Submit');
+      //   let inputs = document.querySelectorAll('input');
+
+      //   const gmail = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+      //   const pass =
+      //     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+      //   let message =
+      //     'at least one lowercase letter at least one uppercase letter at least one number at least one special character (@$!%*?&) minimum 8 characters total';
+
+      //   form.addEventListener('click', (e) => {
+      //     e.preventDefault();
+      //     if (inputs[0].value === '') {
+      //       alert('name is required');
+      //     } else if (gmail.test(inputs[1].value) === false) {
+      //       alert('email is required');
+      //     } else if (pass.test(inputs[2].value) === false) {
+      //       alert(message);
+      //     } else {
+      //       console.log(inputs[0].value);
+      //       console.log(inputs[1].value);
+      //       console.log(inputs[2].value);
+      //     }
+      //   });
+
+      //   let parent = document.querySelector('.parent');
+      //   parent.children[1].textContent = 'added by parent 1';
+      //   parent.children[0].textContent = 'added by parent 0';
+      //   parent.children[2].textContent = 'added by parent 2';
+
+      //   let child = document.querySelector('.child');
+      //   let child2 = document.querySelector('.hello');
+
+      //   let child4 = document.createElement('div');
+      //   child4.textContent = 'added by child 4';
+
+      //   child.parentElement.appendChild(child4);
+      //   console.log(child2.previousElementSibling);
+      //   console.log(child2.nextElementSibling);
+    </script>
+  </body>
+</html>
