@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <input class="inputone hello" type="email" name="" id="" />
+      <input class="inputtwo" type="password" name="" id="" />
+      <button>submit</button>
+    </form>
+    <button id="new">new</button>
+    <script>
+      let inputEmail = document.querySelector('input[type="email"]');
+      let inputPassword = document.querySelector('input[type="password"]');
+      let button = document.querySelector('button');
+      let new1 = document.querySelector('#new');
+      console.log(inputEmail.classList);
+      inputEmail.classList.add('newclass', 'secondclass');
+      inputEmail.classList.remove('hello');
+
+      new1.onclick = () => {
+        inputEmail.classList.toggle('hello');
+      };
+
+      function submitForm(e) {
+        e.preventDefault();
+        console.log(inputEmail.value);
+        console.log(inputPassword.value);
+      }
+      button.onclick = submitForm;
+    </script>
+  </body>
+</html>
