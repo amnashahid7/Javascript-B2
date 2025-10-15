@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" name="" id="" />
+    <button>save to localstorage</button>
+    <h1></h1>
+
+    <script>
+      let input = document.querySelector('input');
+      let button = document.querySelector('button');
+      let heading = document.querySelector('h1');
+
+      let array = ['sakjldas', 'iowiwq', 'iuouioqw', { name: 'ahmed' }];
+
+      let getdata = localStorage.getItem('inputValue');
+      let parsed = JSON.parse(getdata);
+      console.log(parsed);
+
+      heading.textContent = parsed;
+
+      function click() {
+        console.log(input.value);
+        localStorage.setItem('inputValue', JSON.stringify(array));
+        input.value = '';
+      }
+
+      button.onclick = click;
+    </script>
+  </body>
+</html>
