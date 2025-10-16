@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>hello</button>
+    <button id="hello">stop</button>
+
+    <script>
+      let btn = document.querySelector('button');
+      let stp = document.querySelector('#hello');
+
+      let colors = ['red', 'blue', 'green', 'yellow', 'black'];
+
+      let intervalarray = [];
+      btn.onclick = () => {
+        // setTimeout(()=>{
+        //     let random = Math.random();
+        // console.log(random);
+        // },5000)
+
+        let interval = setInterval(() => {
+          let random = (Math.random() * colors.length).toFixed();
+          document.body.style.backgroundColor = colors[random];
+          console.log(random);
+        }, 1000);
+        intervalarray.push(interval);
+        console.log(intervalarray);
+      };
+
+      stp.onclick = () => {
+        intervalarray.forEach(clearInterval);
+        // clearInterval(interval);
+        intervalarray = [];
+      };
+    </script>
+  </body>
+</html>
