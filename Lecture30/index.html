@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let loading = true;
+      async function getdata() {
+        try {
+          let response = await fetch('https://api.github.com/users/mr-sherry');
+          let data = await response.json();
+          console.log(data);
+        } catch (error) {
+          console.log(error);
+        } finally {
+          console.log('hello');
+          loading = false;
+        }
+      }
+      getdata();
+
+      //   reject resolve or then catch finaly
+
+      //   try  catch finaly and async await
+    </script>
+  </body>
+</html>
