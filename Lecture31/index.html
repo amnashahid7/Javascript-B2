@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>hello</h1>
+    <script>
+      //   let a = '22';
+      //   function hello() {
+      //     let a = 1;
+      //     console.log(a);
+      //     function second() {
+      //       console.log(a);
+      //     }
+      //     second();
+      //   }
+
+      //   hello();
+
+      function inc() {
+        let num = 10;
+        return function deposit(amount) {
+          num += amount;
+          console.log(num);
+        };
+      }
+
+      
+      let increment = inc();
+      increment(40);
+
+      //   inc(30-20);
+      //   inc(9282);
+    </script>
+  </body>
+</html>
