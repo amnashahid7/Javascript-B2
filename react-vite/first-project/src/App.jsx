@@ -1,12 +1,19 @@
+import Header from './Components/Home/Header';
+import Hero from './Components/Home/Hero';
+
 function App() {
-  // let email = '';
-
-  // function handleSubmit() {}
-
   return (
     <>
-      <h1 style={{ width: '100px' }}>hello from react</h1>
-      <p>hkajhdksa</p>
+      <div>
+        <Header />
+      </div>
+      <div>
+        <Hero />
+      </div>
+      <div>featurs section</div>
+      <div>about section</div>
+      <div>contact section</div>
+      <div>footer</div>
     </>
   );
 }
