@@ -14,6 +14,7 @@ function App() {
       <div>about section</div>
       <div>contact section</div>
       <div>footer</div>
+      
     </>
   );
 }
