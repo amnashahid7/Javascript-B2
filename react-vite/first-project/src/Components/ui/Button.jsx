@@ -1,13 +1,22 @@
 import React, { useState } from 'react';
+import styles from './Button.module.css';
 
 function Button({ text, image }) {
   let [name, setName] = useState('ahmed');
+  let namesList = [
+    'ahmed',
+    'sayed',
+    'mohamed',
+    'ali',
+    'omar',
+    'youssef',
+    'raza',
+    'mahmoud',
+    'hossam',
+    'islam',
+  ];
 
-  // let name = 'ahmed';
-
-  function hello(inputValue) {
-    console.log(name);
-  }
+  // create array of objects that eac object should have title, author and description .add map on it and show all blogs in cards
 
   return (
     <>
@@ -23,6 +32,8 @@ function Button({ text, image }) {
         {text}
       </button>
 
+      <button className={styles.btn}>with moduler css</button>
+
       <input
         onChange={(e) => {
           setName(e.currentTarget.value);
@@ -32,6 +43,15 @@ function Button({ text, image }) {
       />
       <img src={image} alt='' />
       <h1>{name}</h1>
+
+      <ul>
+        {namesList.map((name, index) => (
+          <div key={index}>
+            <li>{name}</li>
+            <button>Delete</button>
+          </div>
+        ))}
+      </ul>
     </>
   );
 }

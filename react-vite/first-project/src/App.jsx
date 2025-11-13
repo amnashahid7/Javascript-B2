@@ -1,20 +1,10 @@
-import Header from './Components/Home/Header';
-import Hero from './Components/Home/Hero';
+import Button from './Components/ui/Button';
 
 function App() {
   return (
     <>
-      <div>
-        <Header />
-      </div>
-      <div>
-        <Hero />
-      </div>
-      <div>featurs section</div>
-      <div>about section</div>
-      <div>contact section</div>
-      <div>footer</div>
-      
+      <div>hello</div>
+      <Button />
     </>
   );
 }
