@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import Button from './ui/Button';
 
-function SideEffects() {
+function SideEffects({ liftDataUp }) {
   const [data, setData] = useState();
 
   useEffect(() => {
     console.log(data);
+    liftDataUp(data);
   }, [data]);
 
   useEffect(() => {
@@ -26,9 +28,9 @@ function SideEffects() {
     } catch (error) {
       console.log('got error', error);
     }
-    }
-    
-    // https://jsonplaceholder.typicode.com/
+  }
+
+  // https://jsonplaceholder.typicode.com/
 
   useEffect(() => {
     getData();
@@ -36,14 +38,16 @@ function SideEffects() {
 
   return (
     <div>
-      <button
+      <Button
+        text={'hello'}
+        textColor={'yellow'}
+        bgc={'black'}
+        radius={'10px'}
         onClick={() => {
           let num = Math.random();
           setData(`hello ${num}`);
         }}
-      >
-        hello
-      </button>
+      ></Button>
       <div>hello </div>
     </div>
   );

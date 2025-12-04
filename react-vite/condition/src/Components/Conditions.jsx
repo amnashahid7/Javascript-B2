@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 
-function Conditions() {
+function Conditions({ dataFromP }) {
   const [data, setData] = useState(true);
   const [loading, setLoading] = useState(true);
+
+  console.log('hello from conditions', dataFromP);
 
   setTimeout(() => {
     setLoading(false);
