@@ -2,12 +2,26 @@ import React, { useState } from 'react';
 import SideEffects from '../Components/SideEffects';
 import Conditions from '../Components/Conditions';
 import Button from '../Components/ui/Button';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useParams } from 'react-router-dom';
 
 function Contact() {
   const [data, setData] = useState('');
+  let blogs = [
+    'number one',
+    'number two',
+    'number three',
+    'number four',
+    'number five',
+    'number six',
+  ];
+
+  let { name } = useParams();
+  // console.log('sssssssssss', id);
+
   return (
     <div>
+      {/* <h1>{blogs[id]}</h1> */}
+      <h1>{`hello on my website ${name}`}</h1>
       Contact
       <SideEffects liftDataUp={setData} />
       <Conditions dataFromP={data} />
