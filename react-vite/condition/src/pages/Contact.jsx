@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import SideEffects from '../Components/SideEffects';
 import Conditions from '../Components/Conditions';
 import Button from '../Components/ui/Button';
 import { Link, NavLink, useParams } from 'react-router-dom';
+import { DarkContext } from '../context/darkContext';
 
 function Contact() {
   const [data, setData] = useState('');
+  const { darkMode, setDarkMode } = useContext(DarkContext);
   let blogs = [
     'number one',
     'number two',
@@ -14,6 +16,9 @@ function Contact() {
     'number five',
     'number six',
   ];
+
+  setDarkMode('from contact');
+  console.log('sdkjhs', darkMode);
 
   let { name } = useParams();
   // console.log('sssssssssss', id);
