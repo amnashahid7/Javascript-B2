@@ -3,11 +3,12 @@ import SideEffects from '../Components/SideEffects';
 import Conditions from '../Components/Conditions';
 import Button from '../Components/ui/Button';
 import { Link, NavLink, useParams } from 'react-router-dom';
-import { DarkContext } from '../context/darkContext';
+import { ThemeContext } from '../context/ThemeContext';
 
 function Contact() {
+    const { theme } = useContext(ThemeContext);
+  
   const [data, setData] = useState('');
-  const { darkMode, setDarkMode } = useContext(DarkContext);
   let blogs = [
     'number one',
     'number two',
@@ -17,14 +18,19 @@ function Contact() {
     'number six',
   ];
 
-  setDarkMode('from contact');
-  console.log('sdkjhs', darkMode);
-
   let { name } = useParams();
   // console.log('sssssssssss', id);
 
   return (
     <div>
+       <div
+        style={{
+          backgroundColor: theme,
+          border: '2px solid black',
+          height: '200px',
+          width: '200px',
+        }}
+      ></div>
       {/* <h1>{blogs[id]}</h1> */}
       <h1>{`hello on my website ${name}`}</h1>
       Contact

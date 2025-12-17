@@ -1,17 +1,21 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { DarkContext } from '../context/darkContext';
+import { ThemeContext } from '../context/ThemeContext';
 
 function Home() {
-  const { darkMode, setDarkMode } = useContext(DarkContext);
-
-  console.log(darkMode);
+  const { theme } = useContext(ThemeContext);
 
   return (
     <div>
-      <Link to={'/contact/ahmed'}>ahmed</Link>
-      <Link to={'/contact/raza'}>raza</Link>
-      <Link to={'/contact/ali'}>ali</Link>
+      <div
+        style={{
+          backgroundColor: theme,
+          border: '2px solid black',
+          height: '200px',
+          width: '200px',
+        }}
+      ></div>
+      home
     </div>
   );
 }
